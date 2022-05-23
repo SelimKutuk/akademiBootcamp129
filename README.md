@@ -27,8 +27,8 @@ COLLECTIVITY
 - Herkesin bir profili olacak.
 
 ## Ürünün Görüntüsü
-![Ürün Görüntüsü](https://user-images.githubusercontent.com/104414651/167657299-2f332bec-7bf0-47e4-901b-c5565fba7e8b.gif)
-
+![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)
+(https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
 
 ## Hedef Kitle
 
@@ -77,7 +77,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 # Sprint 2
 
-sprint image
+
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
