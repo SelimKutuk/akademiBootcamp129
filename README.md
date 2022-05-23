@@ -27,8 +27,7 @@ COLLECTIVITY
 - Herkesin bir profili olacak.
 
 ## Ürünün Görüntüsü
-![Ürün Görüntüsü](https://user-images.githubusercontent.com/104414651/167657299-2f332bec-7bf0-47e4-901b-c5565fba7e8b.gif)
-
+![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)(https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
 
 ## Hedef Kitle
 
@@ -40,7 +39,6 @@ COLLECTIVITY
 ## Product Backlog URL
 
 [Miro Backlog Board](https://miro.com/app/board/uXjVO3Ow2uA=/?share_link_id=571509816819)
-
 
 
 ---
@@ -77,7 +75,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 # Sprint 2
 
-sprint image
+<img width="960" alt="2022-05-10" src="https://github.com/SelimKutuk/akademiBootcamp129/blob/3bb5dd20ff55912d6846c2d67d94aa95a2c90d87/2022-05-23.png">
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
@@ -89,7 +87,7 @@ sprint image
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/90791658c4f9ed730494d5685b65d93d199d3a24/WhatsApp%20Unknown%202022-05-09%20at%209.34.24%20PM.zip)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/ed770e90bf84a82eede73c60f07736716dd280db/Sprint%202%20tak%C4%B1m%20i%C3%A7i%20konu%C5%9Fmalar/1.jpeg)(https://github.com/SelimKutuk/akademiBootcamp129/blob/ed770e90bf84a82eede73c60f07736716dd280db/Sprint%202%20tak%C4%B1m%20i%C3%A7i%20konu%C5%9Fmalar/2.jpeg)(https://github.com/SelimKutuk/akademiBootcamp129/blob/ed770e90bf84a82eede73c60f07736716dd280db/Sprint%202%20tak%C4%B1m%20i%C3%A7i%20konu%C5%9Fmalar/3.jpeg)(https://github.com/SelimKutuk/akademiBootcamp129/blob/ed770e90bf84a82eede73c60f07736716dd280db/Sprint%202%20tak%C4%B1m%20i%C3%A7i%20konu%C5%9Fmalar/4.jpeg)
 
 - **Sprint Review**: 
  Son ürün kararlaştrırıldı. UI tasarımında temel aktivitelerin tasarımı ve dağılımı yapıldı. Şimdi rünün kodlamasına odaklanılacak.
@@ -97,8 +95,10 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapıldı.
   - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı.
-  - Proje Planı hazırlandı ve plana koyulması ayarlandı.
+  - Proje Planında kodlamaya geçiş için adımlar atıldı.
   - Fikir kararlaştırıldı detaylarıyla beraber.
+  - Daralan zaman aralığından kaynaklı öncelikler değerlendirildi.
+  - Öncelikler belirlendi.
 
 -**Diğer Notlar**:
 - Ayrıca takım içerisinde hep temasdayız. :)
