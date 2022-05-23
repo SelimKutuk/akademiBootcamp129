@@ -95,8 +95,10 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapıldı.
   - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı.
-  - Proje Planı hazırlandı ve plana koyulması ayarlandı.
+  - Proje Planında kodlamaya geçiş için adımlar atıldı.
   - Fikir kararlaştırıldı detaylarıyla beraber.
+  - Daralan zaman aralığından kaynaklı öncelikler değerlendirildi.
+  - Öncelikler belirlendi.
 
 -**Diğer Notlar**:
 - Ayrıca takım içerisinde hep temasdayız. :)
