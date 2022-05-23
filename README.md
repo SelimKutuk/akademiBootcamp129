@@ -39,15 +39,17 @@ COLLECTIVITY
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVO3Ow2uA=/?share_link_id=739335282639/)
-<img width="960" alt="2022-05-10" src="https://user-images.githubusercontent.com/104414651/167646129-e3f61cb1-eb21-4c5d-a28e-d86a99c47429.png">
+[Miro Backlog Board](https://miro.com/app/board/uXjVO3Ow2uA=/?share_link_id=571509816819)
+
 
 
 ---
 
 # Sprint 1
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+<img width="960" alt="2022-05-10" src="https://user-images.githubusercontent.com/104414651/167646129-e3f61cb1-eb21-4c5d-a28e-d86a99c47429.png">
+
+-  **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (135 puana ulaştık)
 
@@ -75,9 +77,11 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 # Sprint 2
 
+sprint image
+
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (135 puana ulaştık)
+- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (127,5 puana ulaştık)
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 570 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
@@ -88,7 +92,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/90791658c4f9ed730494d5685b65d93d199d3a24/WhatsApp%20Unknown%202022-05-09%20at%209.34.24%20PM.zip)
 
 - **Sprint Review**: 
- Son ürün kararlaştrırıldı. Proje kapsamı ve hedef kitle belirlendi. Görev dağılımı tamamlandı. UI tasarımında temel aktivitelerin tasarımı yapıldı.
+ Son ürün kararlaştrırıldı. UI tasarımında temel aktivitelerin tasarımı ve dağılımı yapıldı. Şimdi rünün kodlamasına odaklanılacak.
 
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapıldı.
