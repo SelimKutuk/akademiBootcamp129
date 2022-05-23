@@ -27,8 +27,7 @@ COLLECTIVITY
 - Herkesin bir profili olacak.
 
 ## Ürünün Görüntüsü
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)
-(https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
+![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)(https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
 
 ## Hedef Kitle
 
@@ -40,7 +39,6 @@ COLLECTIVITY
 ## Product Backlog URL
 
 [Miro Backlog Board](https://miro.com/app/board/uXjVO3Ow2uA=/?share_link_id=571509816819)
-
 
 
 ---
@@ -77,7 +75,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 # Sprint 2
 
-
+<img width="960" alt="2022-05-10" src="https://github.com/SelimKutuk/akademiBootcamp129/blob/3bb5dd20ff55912d6846c2d67d94aa95a2c90d87/2022-05-23.png">
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
