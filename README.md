@@ -28,7 +28,7 @@ COLLECTIVITY
 
 ## Ürünün Görüntüsü
 ![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/ed770e90bf84a82eede73c60f07736716dd280db/Sprint%202%20tak%C4%B1m%20i%C3%A7i%20konu%C5%9Fmalar/4.jpeg)
+![Ürün Görüntüsü]()
 ![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/ea6d8c1959064efc2042ff9b0807904f5f2e3e03/WhatsApp%20Image%202022-05-24%20at%201.24.46%20AM%20(1).jpeg)
 
 (https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
