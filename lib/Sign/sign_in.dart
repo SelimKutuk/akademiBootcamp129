@@ -18,7 +18,7 @@ class SignInMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Appia Login',
+      title: "Collectivity'e Giriş Yap",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: UsefulStuff.getMaterialColorFromHex("#0F49AC"),

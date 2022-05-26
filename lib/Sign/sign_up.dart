@@ -1,3 +1,11 @@
+/*
+
+CanberkD tarafından yazıldı.
+
+Kullanılan harici paketler:
+  proste_bezier_curve
+*/
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +19,7 @@ class SignUpMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Appia Register',
+      title: "Collectivity'e üye ol",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: UsefulStuff.getMaterialColorFromHex("#0F49AC")
