@@ -8,9 +8,12 @@ Kullanılan harici paketler:
 */
 
 import 'package:app_collectivity/HomePage/firebase_example.dart';
+import 'package:app_collectivity/Profile/MyHomePage.dart';
+import 'package:app_collectivity/Profile/profile.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePageMain extends StatelessWidget {
   List<String> etkinlikAdlariList;
@@ -20,7 +23,6 @@ class HomePageMain extends StatelessWidget {
   List<String> etkinlikTarihList;
   List<String> etkinlikKonumList;
 
-
   HomePageMain({
     Key? key,
     required this.etkinlikAdlariList,
@@ -29,7 +31,6 @@ class HomePageMain extends StatelessWidget {
     required this.etkinlikResimList,
     required this.etkinlikTarihList,
     required this.etkinlikKonumList,
-
   }) : super(key: key);
 
   @override
@@ -44,8 +45,19 @@ class HomePageMain extends StatelessWidget {
           etkinlikProfilIsimList: etkinlikProfilIsimList,
           etkinlikResimList: etkinlikResimList,
           etkinlikTarihList: etkinlikTarihList,
-          etkinlikKonumList: etkinlikKonumList
-      ),
+          etkinlikKonumList: etkinlikKonumList),
+
+      //Berke Balci
+      /*onGenerateInitialRoutes: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/':
+            return  HomePage();
+            break;
+          case '/second':
+            return SlideRightRoute(widget: SecondHome());
+            break;
+        }
+      }*/
     );
   }
 }
@@ -57,9 +69,7 @@ Color colorEtiket = const Color(0xFF0F49AC);
 
 Color colorPostBackGround = const Color(0xFFA0B9C6);
 
-
 class HomePage extends StatefulWidget {
-
   late final List<String> etkinlikAdlariList;
 
   late final List<String> etkinlikProfilResim;
@@ -80,14 +90,19 @@ class HomePage extends StatefulWidget {
     required this.etkinlikResimList,
     required this.etkinlikTarihList,
     required this.etkinlikKonumList,
-
   }) : super(key: key);
-
+  
+ 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,76 +139,109 @@ class _HomePageState extends State<HomePage> {
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 itemCount: FirebaseExample.PostIsimler.length,
-                itemBuilder: (context, index){
-                return InkWell(
-                  onTap: (){
-                    //ETKİNLİĞE TIKLANDI.
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(widget.etkinlikAdlariList[index] + ' İsimli Etkinlik Tıklandı.'),));
-                  },
-                  child: Container(
-                    height: 535,
-                    decoration: BoxDecoration(color: colorPostBackGround),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0, top: 8),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                width: 60,
-                                height: 60,
-                                child: CircleAvatar(
-                                  child: ClipOval(
-                                      child: CachedNetworkImage(
-                                        imageUrl: widget.etkinlikProfilResim[index],
-                                        fit: BoxFit.cover,
-                                      )
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () {
+                      //ETKİNLİĞE TIKLANDI.
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(widget.etkinlikAdlariList[index] +
+                            ' İsimli Etkinlik Tıklandı.'),
+                      ));
+                    },
+                    child: Container(
+                      height: 535,
+                      decoration: BoxDecoration(color: colorPostBackGround),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0, top: 8),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 60,
+                                  height: 60,
+                                  child: CircleAvatar(
+                                    child: ClipOval(
+                                        child: CachedNetworkImage(
+                                      imageUrl:
+                                          widget.etkinlikProfilResim[index],
+                                      fit: BoxFit.cover,
+                                    )),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 18.0,),
-                                child: Text(widget.etkinlikProfilIsimList[index], style: const TextStyle(color: CupertinoColors.black, fontSize: 18),),
-                              ),
-                            ],
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 18.0,
+                                  ),
+                                  child: Text(
+                                    widget.etkinlikProfilIsimList[index],
+                                    style: const TextStyle(
+                                        color: CupertinoColors.black,
+                                        fontSize: 18),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 18.0),
-                          child: Align(alignment: Alignment.topLeft,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('ETKİNLİK: ' + widget.etkinlikAdlariList[index], style: const TextStyle(fontSize: 18),),
-                                  Text('TARİH: ' + widget.etkinlikTarihList[index], style: const TextStyle(fontSize: 18)),
-                                  Text('YER: ' + widget.etkinlikKonumList[index], style: const TextStyle(fontSize: 18)),
-                                ]
+                          Padding(
+                            padding: const EdgeInsets.only(left: 18.0),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'ETKİNLİK: ' +
+                                            widget.etkinlikAdlariList[index],
+                                        style: const TextStyle(fontSize: 18),
+                                      ),
+                                      Text(
+                                          'TARİH: ' +
+                                              widget.etkinlikTarihList[index],
+                                          style: const TextStyle(fontSize: 18)),
+                                      Text(
+                                          'YER: ' +
+                                              widget.etkinlikKonumList[index],
+                                          style: const TextStyle(fontSize: 18)),
+                                    ]),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                            height: 372,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CachedNetworkImage(imageUrl: widget.etkinlikResimList[index]),
-                            )
-                        ),
-                        const Divider(thickness: 3,),
-                      ],
+                          SizedBox(
+                              height: 372,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: CachedNetworkImage(
+                                    imageUrl: widget.etkinlikResimList[index]),
+                              )),
+                          const Divider(
+                            thickness: 3,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
               ),
             ),
           ),
         ],
       ),
+      bottomNavigationBar:
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+        ElevatedButton(
+          child: Icon(Icons.manage_accounts_outlined),
+          onPressed: () {
+            Go_Profile();
+          },
+        )
+      ]),
     );
   }
+
   Future<void> refresh() async {
     setState(() {
       widget.etkinlikAdlariList = FirebaseExample.PostEtkinlikAdlari;
@@ -204,7 +252,15 @@ class _HomePageState extends State<HomePage> {
       widget.etkinlikProfilResim = FirebaseExample.PostProfileImgs;
     });
   }
+
+  
+  Future? Go_Profile() {
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => MyApp(),
+      ),
+      (route) => false,
+    );
+  }
 }
-
-
-
