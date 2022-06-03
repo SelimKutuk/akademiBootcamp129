@@ -1,19 +1,19 @@
 /*
 
-CanberkD tarafından yazıldı.
+CanberkD ve berkebalci tarafından yazıldı.
 
 Kullanılan harici paketler:
   cached_network_image: ^3.2.0
 
 */
-
 import 'package:app_collectivity/HomePage/firebase_example.dart';
-import 'package:app_collectivity/Profile/MyHomePage.dart';
-import 'package:app_collectivity/Profile/profile.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
+import '../Profile/Profile.dart';
+
 
 class HomePageMain extends StatelessWidget {
   List<String> etkinlikAdlariList;
@@ -233,10 +233,14 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar:
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
         ElevatedButton(
-          child: Icon(Icons.manage_accounts_outlined),
+          
+          child: Icon(Icons.manage_accounts_outlined,size: 30),
           onPressed: () {
             Go_Profile();
           },
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            )
         )
       ]),
     );
@@ -257,8 +261,8 @@ class _HomePageState extends State<HomePage> {
   Future? Go_Profile() {
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(
-        builder: (BuildContext context) => MyApp(),
+      MaterialPageRoute(  //Ana sayfa >>> Profil Sayfasi
+        builder: (BuildContext context) => Profile_Screen(title: "Profile",),
       ),
       (route) => false,
     );
