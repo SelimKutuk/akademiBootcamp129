@@ -262,12 +262,7 @@ class _HomePageState extends State<HomePage> {
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(  //Ana sayfa >>> Profil Sayfasi
-        builder: (BuildContext context) => Profile_Screen(
-          city: "İstanbul",
-          name: "Goktug Arslan",
-          age: "20",
-          job: "Developer",
-          ),
+        builder: (BuildContext context) => Profile_Screen(),
       ),
       (route) => false,
     );

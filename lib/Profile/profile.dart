@@ -1,26 +1,26 @@
 import 'dart:ffi';
 
 import 'package:app_collectivity/HomePage/homepage.dart';
+import 'package:app_collectivity/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../HomePage/firebase_example.dart';
 
 //Ana Kod
 class Profile_Screen extends StatefulWidget {
-  String name = "---";
-  String? age = "---";
-  String? job = "---";
-  String city = "---";
-  Profile_Screen(
-      {Key? key, required this.name, required this.city, this.age, this.job})
-      : super(key: key);
+  //User'dan gelecek bilgiler.
+
+  Profile_Screen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<Profile_Screen> createState() => _Profile_ScreenState();
 }
 
 class _Profile_ScreenState extends State<Profile_Screen> {
-  int post_number = 4; //Profildeki post sayisi(Firebase'den gelcek)
+  //Profildeki post sayisi(Firebase'den gelcek)
+  var user = Userpreferences.myUser;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,8 @@ class _Profile_ScreenState extends State<Profile_Screen> {
     }
 
     return Scaffold(
-        backgroundColor: colorMainBackGround
-            , //Ekranin orta kısmının rengini buradan ayarlayabiliriz.
+        backgroundColor:
+            colorMainBackGround, //Ekranin orta kısmının rengini buradan ayarlayabiliriz.
 
         body: Container(
           child: Column(children: [
@@ -83,8 +83,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 CircleAvatar(
                   backgroundImage:
                       // ignore: prefer_const_constructors
-                      NetworkImage(
-                          "https://picsum.photos/200/300"), //Profil Fotoğrafı
+                      NetworkImage(user.image_path), //Profil Fotoğrafı
                   radius: 60,
                 ),
 
@@ -94,15 +93,15 @@ class _Profile_ScreenState extends State<Profile_Screen> {
 
             SizedBox(height: 15),
             Text(
-              "${widget.name}",
+              "${user.name}",
               style: TextStyle(fontSize: 25, fontStyle: FontStyle.normal),
             ), // İsim
 
             //Diğer Bilgiler
-            Text("${widget.city}"),
+            Text("${user.location}"),
             Row(children: [
-              Expanded(child: Text("${widget.job}")),
-              Expanded(child: Text("${widget.age}"))
+              Expanded(child: Text("${user.job}")),
+              Expanded(child: Text("${user.age}"))
             ]),
             ElevatedButton(
                 onPressed: () {
@@ -120,7 +119,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   child: ListView.separated(
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
-                      itemCount: post_number,
+                      itemCount: user.Postnumber,
                       separatorBuilder: (context, _) => SizedBox(height: 5),
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
@@ -129,7 +128,9 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                               Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Etkinlik Saati:20.00",),
+                                    Text(
+                                      "Etkinlik Saati:20.00",
+                                    ),
                                     Text("Etkinlik Yeri:İstanbul"),
                                     Text("Tarih: 21.06.2022")
                                   ]),
@@ -157,7 +158,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
 
   void Post_Arttir() {
     setState(() {
-      post_number++;
+      user.Postnumber++;
     });
   }
 
