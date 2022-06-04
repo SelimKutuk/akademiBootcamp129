@@ -129,7 +129,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                               Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Etkinlik Saati:20.00"),
+                                    Text("Etkinlik Saati:20.00",),
                                     Text("Etkinlik Yeri:İstanbul"),
                                     Text("Tarih: 21.06.2022")
                                   ]),
