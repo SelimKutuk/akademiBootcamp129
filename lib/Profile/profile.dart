@@ -93,7 +93,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
               SizedBox(height: 15),
               Text(
                 "${user.name}",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
               ), // İsim
 
               //Diğer Bilgiler

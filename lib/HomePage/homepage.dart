@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                       widget.etkinlikProfilIsimList[index],
                                       style: const TextStyle(
                                           color: CupertinoColors.black,
-                                          fontSize: 18),
+                                          fontSize: 21),
                                     ),
                                   ),
                                 ],
