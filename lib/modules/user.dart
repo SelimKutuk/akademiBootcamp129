@@ -8,10 +8,10 @@ class User {
   String image_path;
   int Postnumber;
   User(
-      {required this.name,
+      {required this.name ,
       required this.age,
       required this.job,
       required this.location,
-      required this.image_path,
+      required this.image_path, //this.image_path = "asdadada" tarzı olabilir
       required this.Postnumber});
 }

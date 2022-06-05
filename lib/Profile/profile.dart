@@ -1,6 +1,8 @@
 import 'dart:ffi';
 
 import 'package:app_collectivity/HomePage/homepage.dart';
+import 'package:app_collectivity/Profile/Profil_Edit.dart';
+import 'package:app_collectivity/modules/user.dart';
 import 'package:app_collectivity/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,8 +22,9 @@ class Profile_Screen extends StatefulWidget {
 
 class _Profile_ScreenState extends State<Profile_Screen> {
   //Profildeki post sayisi(Firebase'den gelcek)
+  //**********************
   var user = Userpreferences.myUser;
-
+  //**********************
   @override
   Widget build(BuildContext context) {
     //Kodta !...! olanlar diğer takım arkadaşları tarafından gönderilip sonradan değiştirilecek.
@@ -34,125 +37,120 @@ class _Profile_ScreenState extends State<Profile_Screen> {
         backgroundColor:
             colorMainBackGround, //Ekranin orta kısmının rengini buradan ayarlayabiliriz.
 
-        body: Container(
-          child: Column(children: [
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                IconButton(
-                  icon: Icon(
-                    Icons.keyboard_backspace,
-                    size: 30,
-                    color: Colors.white,
+        body: Center(
+          child: Container(
+            child: Column(children: [
+              SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  IconButton(
+                    icon: Icon(
+                      Icons.keyboard_backspace,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => HomePage(
+                              etkinlikAdlariList: FirebaseExample
+                                  .PostEtkinlikAdlari, //Ana sayfaya geri dönme
+                              etkinlikProfilResim:
+                                  FirebaseExample.PostProfileImgs,
+                              etkinlikProfilIsimList:
+                                  FirebaseExample.PostIsimler,
+                              etkinlikResimList: FirebaseExample.PostImgs,
+                              etkinlikTarihList: FirebaseExample.PostTarihler,
+                              etkinlikKonumList: FirebaseExample.PostKonum),
+                        ),
+                        (route) => false,
+                      );
+                    },
                   ),
-                  onPressed: () {
+                ],
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  onPressed: (() {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => HomePage(
-                            etkinlikAdlariList: FirebaseExample
-                                .PostEtkinlikAdlari, //Ana sayfaya geri dönme
-                            etkinlikProfilResim:
-                                FirebaseExample.PostProfileImgs,
-                            etkinlikProfilIsimList: FirebaseExample.PostIsimler,
-                            etkinlikResimList: FirebaseExample.PostImgs,
-                            etkinlikTarihList: FirebaseExample.PostTarihler,
-                            etkinlikKonumList: FirebaseExample.PostKonum),
+                        // Profil >>> Profil Editleme
+                        builder: (BuildContext context) => Profile_Edit(),
                       ),
                       (route) => false,
                     );
-                  },
+                    ; //Burası profil bilgileri değiştirme kısmı
+                  }),
+                  icon: Icon(Icons.edit, size: 25, color: Colors.blue),
                 ),
-              ],
-            ),
-            Align(
-              alignment: Alignment.topRight,
-              child: IconButton(
-                onPressed: (() {
-                  print("Berke"); //Burası profil bilgileri değiştirme kısmı
-                }),
-                icon: Icon(Icons.edit, size: 25, color: Colors.blue),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                // ignore: prefer_const_constructors
-                CircleAvatar(
-                  backgroundImage:
-                      // ignore: prefer_const_constructors
-                      NetworkImage(user.image_path), //Profil Fotoğrafı
-                  radius: 60,
+              Photo_Edit(user: user), //!API!
+
+              SizedBox(height: 15),
+              Text(
+                "${user.name}",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ), // İsim
+
+              //Diğer Bilgiler
+              Text("${user.location}"),
+              Column(children: [
+                Text(
+                  "Meslek: ${user.job}",
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
+                Text("Yaş: ${user.age}",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ]),
 
-                //Profil Editleme
-              ],
-            ), //!API!
-
-            SizedBox(height: 15),
-            Text(
-              "${user.name}",
-              style: TextStyle(fontSize: 25, fontStyle: FontStyle.normal),
-            ), // İsim
-
-            //Diğer Bilgiler
-            Text("${user.location}"),
-            Row(children: [
-              Expanded(child: Text("${user.job}")),
-              Expanded(child: Text("${user.age}"))
+              Column(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView.separated(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        itemCount: user.Postnumber,
+                        separatorBuilder: (context, _) => SizedBox(height: 5),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            child: Column(
+                              children: [
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Etkinlik Saati:20.00",
+                                      ),
+                                      Text("Etkinlik Yeri:İstanbul"),
+                                      Text("Tarih: 21.06.2022")
+                                    ]),
+                                SizedBox(
+                                    child: Image.network(
+                                  'https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170301312/73848230-logo-universit%C3%A9.jpg',
+                                  height: 330,
+                                )),
+                                Divider(
+                                  thickness: 5,
+                                  indent: 20,
+                                  endIndent: 20,
+                                  color: Colors.black,
+                                )
+                              ],
+                            ),
+                          );
+                        }),
+                  ),
+                ],
+              )
             ]),
-            ElevatedButton(
-                onPressed: () {
-                  Post_Arttir();
-                },
-                child: Text("Artir"),
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.deepPurple))),
-            Column(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height / 2,
-                  width: MediaQuery.of(context).size.width,
-                  child: ListView.separated(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      itemCount: user.Postnumber,
-                      separatorBuilder: (context, _) => SizedBox(height: 5),
-                      itemBuilder: (BuildContext context, int index) {
-                        return Container(
-                          child: Column(
-                            children: [
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Etkinlik Saati:20.00",
-                                    ),
-                                    Text("Etkinlik Yeri:İstanbul"),
-                                    Text("Tarih: 21.06.2022")
-                                  ]),
-                              SizedBox(
-                                  child: Image.network(
-                                'https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170301312/73848230-logo-universit%C3%A9.jpg',
-                                height: 330,
-                              )),
-                              Divider(
-                                thickness: 5,
-                                indent: 20,
-                                endIndent: 20,
-                                color: Colors.black,
-                              )
-                            ],
-                          ),
-                        );
-                      }),
-                ),
-              ],
-            )
-          ]),
+          ),
         ));
   }
 
@@ -169,5 +167,52 @@ class _Profile_ScreenState extends State<Profile_Screen> {
       //Profildeki bilgilerin dolu olup olmadığına bakıyor.
       return "---";
     }
+  }
+}
+
+class Photo_Edit extends StatelessWidget {
+  const Photo_Edit({
+    Key? key,
+    required this.user, //Tekrardan user almamızın sebebi
+    //'user''ın fieldlarını değiştireceğiz o yüzden
+  }) : super(key: key);
+
+  final User user;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      // ignore: prefer_const_literals_to_create_immutables
+      children: [
+        // ignore: prefer_const_constructors
+        InkWell(
+          
+            child: Ink(
+
+              child: CircleAvatar(
+                child: Container(child: 
+                Align(
+                  alignment: Alignment.bottomRight
+                  ,child: 
+                  Icon(Icons.camera_alt_sharp,color: Colors.white,
+                  size: 30,)),),
+                backgroundImage:
+                    // ignore: prefer_const_constructors
+                    NetworkImage(user.image_path), //Profil Fotoğrafı
+                radius: 60,
+              ),
+            ),
+            onTap: (){
+              setState(){  //Buraya sonra bakılacak
+
+              }
+            },
+
+            ),
+
+        //Profil Editleme
+      ],
+    );
   }
 }
