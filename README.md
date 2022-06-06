@@ -27,10 +27,7 @@ COLLECTIVITY
 - Herkesin bir profili olacak.
 
 ## Ürünün Görüntüsü
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202.jpeg)
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/6a604378c7d40c989239552a790dd883ff3701e6/WhatsApp%20Image%202022-05-24%20at%201.24.46%20AM.jpeg)
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/ea6d8c1959064efc2042ff9b0807904f5f2e3e03/WhatsApp%20Image%202022-05-24%20at%201.24.46%20AM%20(1).jpeg)
-![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/e3cf72be17f8a1cb77bf90139be44ba76a5cc180/%C3%9Cr%C3%BCn%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%201.jpeg)
+![Ürün Görüntüsü](https://github.com/SelimKutuk/akademiBootcamp129/blob/6f22a3348623971d11bc18860ac366c7cc8c2744/%C3%9Cr%C3%BCn%20G%C3%B6r%C3%BCnt%C3%BCleri.zip)
 
 ## Hedef Kitle
 
@@ -54,7 +51,7 @@ COLLECTIVITY
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (135 puana ulaştık)
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 570 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 513 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz da görev dağılımdan sonra çok fazla malzeme kalmadı . Sprint başına tahmin edilen puan sayısını geçebilecek şekilde rahat seçimler yapılmaktadır. 
 
@@ -82,7 +79,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (127,5 puana ulaştık)
+- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan (127 puana ulaştık)
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 570 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
@@ -105,4 +102,34 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 -**Diğer Notlar**:
 - Ayrıca takım içerisinde hep temasdayız. :)
+
+---
+
+# Sprint 3
+
+https://github.com/SelimKutuk/akademiBootcamp129/blob/93e1e0abcf877860060a292101a444035f05667e/MIRO%20Sprint%203.png
+
+-  **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 205 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 513 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde son sprint'in en azından 205 ile başlaması gerektiğine karar verildi.
+
+- **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçebilecek şekilde rahat seçimler yapılmaktadır. 
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/0d1e167447532e0c18197ed5e21e32cff441abe5/Sprint%203.zip)
+
+- **Sprint Review**: 
+ Son ürün kararlaştrırıldı. Görev dağılımı tamamlandı. UI tasarımı bitirildi. Kodlamalar yapıldı. 
+- **Sprint Retrospective:**
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapıldı.
+  - UI tasarımı bitirildi.
+  - Proje Planı hazırlandı ve plana koyulması ayarlandı.
+  - Kodlamalar yapıldı.
+  - Uygulamada öncelikli kısımlar belirlendi ve bitirildiğinden emin olundu.
+
+-**Diğer Notlar**:
+- Takım içerisinde hep temasdayız. Ve planladığımız bir kısımda sıkıntı var ama 8 ine kadar düzeltiriz ve video da görünür. :)
 
