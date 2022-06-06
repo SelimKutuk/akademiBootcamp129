@@ -44,8 +44,7 @@ const UserSchema = new Schema({
         enum: ["male","female","unkown"]
     },
     socialmedia_url : {
-        type : String,
-        required : true
+        type : String
     },
     image_url : {
         type: String,
