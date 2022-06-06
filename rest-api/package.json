@@ -1,7 +1,7 @@
 {
-  "name": "likefoll-server-api",
+  "name": "collectivity-rest-api",
   "version": "1.0.0",
-  "description": "Likefoll Social Network Api",
+  "description": "Collectivity Social Network Api",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/SelimKutuk/likefoll_serverlatest.git"
   },
-  "author": "Likefoll Ventures Corporation",
+  "author": "Selim Kutuk",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
