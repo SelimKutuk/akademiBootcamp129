@@ -131,5 +131,5 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
   - Uygulamada öncelikli kısımlar belirlendi ve bitirildiğinden emin olundu.
 
 -**Diğer Notlar**:
-- Takım içerisinde hep temasdayız. Ve bir planladığımız kısım daha bitmedi ama 8 ine kadar biter ve video da görünür. :)
+- Takım içerisinde hep temasdayız. Ve planladığımız bir kısımda sıkıntı var ama 8 ine kadar düzeltiriz ve video da görünür. :)
 
