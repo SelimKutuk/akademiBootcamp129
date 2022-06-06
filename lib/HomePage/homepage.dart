@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                       (BuildContext context) => Post()) )
                       , (route) => false);
                  },
-       child: Icon(Icons.control_point_sharp,size: 30,),)
+       child: Icon(Icons.control_point_sharp,size: 29,),)
       ,body: Stack(
         children: [Column(
           children: [
@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                                       widget.etkinlikProfilIsimList[index],
                                       style: const TextStyle(
                                           color: CupertinoColors.black,
-                                          fontSize: 21),
+                                          fontSize: 22),
                                     ),
                                   ),
                                 ],
