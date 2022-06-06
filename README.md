@@ -111,7 +111,7 @@ https://github.com/SelimKutuk/akademiBootcamp129/blob/93e1e0abcf877860060a292101
 
 -  **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 205 Puan (165 puana ulaştık)
+- **Sprint içinde tamamlanması tahmin edilen puan**: 205 Puan
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 513 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde son sprint'in en azından 205 ile başlaması gerektiğine karar verildi.
 
