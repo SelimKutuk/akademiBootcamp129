@@ -1,2 +1,2 @@
-# likefoll-api-server
-# likefoll_serverlatest
+# collectivity_restapi
+# collectivity app
