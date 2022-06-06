@@ -22,7 +22,7 @@ const uploadImage = asyncErrorWrapper(async (req, res, next) => {
         post_desc,
         post_title,
         post_image : req.savedImage,
-        photo_url:`https://likefoll.xyz/postImages/${user.username}/${req.savedImage}`,
+        photo_url:`http://34.89.242.41/api/postImages/${user.username}/${req.savedImage}`,
         user: id
     });
     const { filename: post_image } = req.file 
