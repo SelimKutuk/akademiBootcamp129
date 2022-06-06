@@ -99,7 +99,7 @@ const imageUpload = asyncErrorWrapper(async (req, res, next) => {
     const users = await User.findById(id);
     const user = await User.findByIdAndUpdate(id, {
         profile_image : req.savedProfileImage,
-        image_url : `https://likefoll.xyz/postImages/${users.username}/${req.savedProfileImage}`
+        image_url : `http://34.89.242.41/api/postImages/${users.username}/${req.savedProfileImage}`
     }, {
         new: true,
         runValidators: true
