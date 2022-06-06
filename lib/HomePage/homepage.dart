@@ -13,6 +13,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Post/share_post.dart';
 import '../Profile/Profile.dart';
 
 
@@ -108,7 +109,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorMainBackGround,
-      body: Stack(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton:  FloatingActionButton(
+        onPressed: () { 
+                  Navigator.pushAndRemoveUntil(
+                    context, MaterialPageRoute( //
+                    builder: (
+                      (BuildContext context) => Post()) )
+                      , (route) => false);
+                 },
+       child: Icon(Icons.control_point_sharp,size: 30,),)
+      ,body: Stack(
         children: [Column(
           children: [
             /* ETİKET BARI. SONRA EKLENMESİ DURUMUNDA KULLANILACAK.
@@ -134,6 +145,8 @@ class _HomePageState extends State<HomePage> {
             ),
 
              */
+            
+           
             Expanded(
               child: RefreshIndicator(
                 onRefresh: refresh,
@@ -143,6 +156,7 @@ class _HomePageState extends State<HomePage> {
                   itemCount: FirebaseExample.PostIsimler.length,
                   itemBuilder: (context, index) {
                     return InkWell(
+                      
                       onTap: () {
                         //ETKİNLİĞE TIKLANDI.
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -164,6 +178,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 60,
                                     child: CircleAvatar(
                                       child: ClipOval(
+                                      
                                           child: CachedNetworkImage(
                                         imageUrl:
                                             widget.etkinlikProfilResim[index],

@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:app_collectivity/HomePage/homepage.dart';
 import 'package:app_collectivity/Profile/Profil_Edit.dart';
 import 'package:app_collectivity/modules/user.dart';
@@ -8,10 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../HomePage/firebase_example.dart';
 
-//Ana Kod
+/*berkebalci*/ 
 class Profile_Screen extends StatefulWidget {
-  //User'dan gelecek bilgiler.
-
   Profile_Screen({
     Key? key,
   }) : super(key: key);
@@ -23,7 +20,10 @@ class Profile_Screen extends StatefulWidget {
 class _Profile_ScreenState extends State<Profile_Screen> {
   //Profildeki post sayisi(Firebase'den gelcek)
   //**********************
-  var user = Userpreferences.myUser;
+  
+  var user = Userpreferences.myUser;   //3
+  
+  
   //**********************
   @override
   Widget build(BuildContext context) {
@@ -170,7 +170,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
   }
 }
 
-class Photo_Edit extends StatelessWidget {
+class Photo_Edit extends StatelessWidget {  //Bu widget "Profile_Edit.dart"'da kullanıldı
   const Photo_Edit({
     Key? key,
     required this.user, //Tekrardan user almamızın sebebi

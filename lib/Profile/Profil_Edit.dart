@@ -1,9 +1,12 @@
 import 'package:app_collectivity/Profile/Profile.dart';
+import 'package:app_collectivity/Sign/sign_up.dart';
 import 'package:app_collectivity/utils/user_preferences.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 
 import '../modules/user.dart';
+/*berkebalci*/
 
 class Profile_Edit extends StatefulWidget {
   Profile_Edit({Key? key}) : super(key: key);
@@ -14,6 +17,7 @@ class Profile_Edit extends StatefulWidget {
 
 class _Profile_EditState extends State<Profile_Edit> {
   User user = Userpreferences.myUser;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +25,8 @@ class _Profile_EditState extends State<Profile_Edit> {
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(
-              Icons.backspace,
-              color: Colors.black,
+              Icons.keyboard_backspace,
+              color: Colors.white,
             ),
             onPressed: () {
               Navigator.pushAndRemoveUntil(
@@ -48,7 +52,8 @@ class _Profile_EditState extends State<Profile_Edit> {
           TextFieldWidget(
             label: "İsim,Soyisim",
             text: "${user.name}",
-            IsChanged: (name) {},
+            index: 1,
+            IsChanged: (name) {}, 
           ),
           SizedBox(
             height: 25,
@@ -56,6 +61,7 @@ class _Profile_EditState extends State<Profile_Edit> {
           TextFieldWidget(
             label: "Lokasyon(Şehir/Ülke)",
             text: "${user.location}",
+            index: 4,
             IsChanged: (location) {},
           ),
           SizedBox(
@@ -64,6 +70,7 @@ class _Profile_EditState extends State<Profile_Edit> {
           TextFieldWidget(
             label: "Yaş",
             text: "${user.age}",
+            index: 2,
             IsChanged: (age) {}, //Burası API kısmı olcak.Api'ye istek aticaz.
           ),
           SizedBox(
@@ -72,6 +79,7 @@ class _Profile_EditState extends State<Profile_Edit> {
           TextFieldWidget(
             label: "Meslek",
             text: "${user.job}",
+            index: 3,
             IsChanged: (job) {},
           ),
         ],
@@ -84,31 +92,33 @@ class TextFieldWidget extends StatefulWidget {
   String text; //Girilecek text
   ValueChanged<String> IsChanged; //Değer değiştiği zaman işimize yarar.
   String label; //Başlık(İsim,yaş,....)
-
+   //Gelecek fonksiyon
+  int index;
   TextFieldWidget(
       {Key? key,
       required this.IsChanged,
       required this.text,
-      required this.label})
+      required this.label,
+      required this.index})
       : super(key: key);
+  late TextEditingController controller;
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
-  late TextEditingController controller;
   @override
   void initState() {
     super.initState();
-    controller = TextEditingController(text: widget.text);
+    widget.controller = TextEditingController(text: widget.text);
   }
 
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose(); //Başka sayfaya geçtiğimzde bunları silecek.
-    controller.dispose();
+    widget.controller.dispose();
   }
 
   @override
@@ -121,7 +131,12 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         TextField(
-          controller: controller,
+          onChanged: (value) {
+            setState(() {
+              Userpreferences.Change_variable(value,widget.index);
+            });
+          },
+          controller: widget.controller,
           decoration: InputDecoration(
               border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
