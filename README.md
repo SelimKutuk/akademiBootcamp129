@@ -122,10 +122,10 @@ https://github.com/SelimKutuk/akademiBootcamp129/blob/93e1e0abcf877860060a292101
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/90791658c4f9ed730494d5685b65d93d199d3a24/WhatsApp%20Unknown%202022-05-09%20at%209.34.24%20PM.zip)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü genel olarak Whatsapp üzerinden, özellikle Zoom ve Google Meets ile yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır:(https://github.com/SelimKutuk/akademiBootcamp129/blob/0d1e167447532e0c18197ed5e21e32cff441abe5/Sprint%203.zip)
 
 - **Sprint Review**: 
- Son ürün kararlaştrırıldı. Görev dağılımı tamamlandı. UI tasarımı bitirildi. 
+ Son ürün kararlaştrırıldı. Görev dağılımı tamamlandı. UI tasarımı bitirildi. Kodlamalar yapıldı. 
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapıldı.
   - UI tasarımı bitirildi.
