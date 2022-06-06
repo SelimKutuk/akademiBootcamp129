@@ -110,7 +110,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 # Sprint 3
 
-<img width="960" alt="2022-05-10" src="https://user-images.githubusercontent.com/104414651/167646129-e3f61cb1-eb21-4c5d-a28e-d86a99c47429.png">
+https://github.com/SelimKutuk/akademiBootcamp129/blob/93e1e0abcf877860060a292101a444035f05667e/MIRO%20Sprint%203.png
 
 -  **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
