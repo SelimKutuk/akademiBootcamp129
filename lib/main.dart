@@ -6,12 +6,6 @@ import 'Sign/sign_in.dart';
 import 'HomePage/firebase_example.dart';
 
 void main() {
-  runApp(HomePageMain(
-    etkinlikAdlariList: FirebaseExample.PostEtkinlikAdlari,
-    etkinlikKonumList: FirebaseExample.PostKonum,
-    etkinlikProfilIsimList: FirebaseExample.PostIsimler,
-    etkinlikProfilResimlerList: FirebaseExample.PostProfileImgs,
-    etkinlikResimList: FirebaseExample.PostImgs,
-    etkinlikTarihList: FirebaseExample.PostTarihler,
+  runApp((SignInMain()
   ));
 }

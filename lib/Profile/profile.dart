@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'package:app_collectivity/HomePage/homepage.dart';
 import 'package:app_collectivity/Profile/Profil_Edit.dart';
+import 'package:app_collectivity/Sign/sign_in.dart';
 import 'package:app_collectivity/modules/user.dart';
 import 'package:app_collectivity/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,21 @@ class _Profile_ScreenState extends State<Profile_Screen> {
     }
 
     return Scaffold(
-        backgroundColor:
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  //Ana sayfa >>> Profil Sayfasi
+                  builder: (BuildContext context) => SignInMain(
+),
+                ),
+                (route) => false,
+              );
+          },
+          child: Icon(Icons.logout,)),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endTop
+        ,backgroundColor:
             colorMainBackGround, //Ekranin orta kısmının rengini buradan ayarlayabiliriz.
 
         body: Center(

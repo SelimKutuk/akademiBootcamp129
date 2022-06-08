@@ -108,6 +108,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent),
+      extendBodyBehindAppBar: true,
       backgroundColor: colorMainBackGround,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton:  FloatingActionButton(

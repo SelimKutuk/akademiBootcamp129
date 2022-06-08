@@ -101,7 +101,7 @@ class TextFieldWidget extends StatefulWidget {
       required this.label,
       required this.index})
       : super(key: key);
-  late TextEditingController controller;
+  TextEditingController? controller;
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
@@ -118,7 +118,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   void dispose() {
     // TODO: implement dispose
     super.dispose(); //Başka sayfaya geçtiğimzde bunları silecek.
-    widget.controller.dispose();
+    
   }
 
   @override

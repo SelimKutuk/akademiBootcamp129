@@ -6,6 +6,7 @@ Kullanılan harici paketler:
   proste_bezier_curve
 */
 
+import 'package:app_collectivity/Sign/sign_in.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -198,6 +199,14 @@ class _RegisterHomePageState extends State<RegisterHomePage> {
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   //Giriş yapmak istiyor.
+                                  Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  //Ana sayfa >>> Profil Sayfasi
+                  builder: (BuildContext context) => SignInMain(),
+                ),
+                (route) => false,
+              );
                                 }
                           ),
                         ]

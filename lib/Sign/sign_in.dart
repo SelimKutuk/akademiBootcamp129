@@ -6,8 +6,11 @@ Kullanılan harici paketler:
   proste_bezier_curve
 */
 
+import 'package:app_collectivity/HomePage/homepage.dart';
+import 'package:app_collectivity/Sign/sign_up.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import '../HomePage/firebase_example.dart';
 import 'final_vars.dart';
 import 'somestuff.dart';
 
@@ -41,13 +44,16 @@ class _RegisterMainState extends State<RegisterMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
         backgroundColor: darkCultured,
-        body: Column(
+        body: ListView(
           children: [
-            Container(
-              child: CurvedBackgroundWithText(text1: "COLLECTIVITY'e", text2: "Giriş", text3: "Yap", width: 400,),
+            Column(
+              children: [
+                CurvedBackgroundWithText(text1: "COLLECTIVITY'e", text2: "Giriş", text3: "Yap", width: 400,),
+              
+                ContainerLogin()],
             ),
-            ContainerLogin()
           ],
         )
     );
@@ -150,6 +156,15 @@ class ContainerLogin extends StatelessWidget {
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             //Üye ol Clicked
+                            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  //Ana sayfa >>> Profil Sayfasi
+                  builder: (BuildContext context) => SignUpMain(),
+                ),
+                (route) => false,
+              );
+
                           }
                     ),
                   ]
@@ -163,6 +178,24 @@ class ContainerLogin extends StatelessWidget {
 
   void LoginClicked(BuildContext context) {
     //Giriş yap tıklandı.
+     Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  //Ana sayfa >>> Profil Sayfasi
+                  builder: (BuildContext context) => HomePage(
+                    etkinlikAdlariList: FirebaseExample
+                                            .PostEtkinlikAdlari, //Ana sayfaya geri dönme
+                                        etkinlikProfilResim:
+                                            FirebaseExample.PostProfileImgs,
+                                        etkinlikProfilIsimList:
+                                            FirebaseExample.PostIsimler,
+                                        etkinlikResimList: FirebaseExample.PostImgs,
+                                        etkinlikTarihList: FirebaseExample.PostTarihler,
+                                        etkinlikKonumList: FirebaseExample.PostKonum
+                  ),
+                ),
+                (route) => false,
+              );
 
   }
 
